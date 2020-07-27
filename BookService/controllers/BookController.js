@@ -13,15 +13,10 @@ function BookController() {
     Book.add(req.body).then(data => res.json(data));
   };
 
-  const deleteBooks = function(req, res) {
-    Book.delete(req.param.id).then(data => res.json(data));
-  };
-
   return {
     list: listBooks,
     get: getBook,
     add: addBooks,
-    delete: deleteBooks
   };
 }
 
