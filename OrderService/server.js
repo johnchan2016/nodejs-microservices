@@ -1,16 +1,16 @@
 const express = require("express");
 const app = express();
 const BodyParser = require("body-parser");
-const BookRoutes = require("./src/routes/BookRoutes");
-const port = 3001;
+const OrderRoutes = require("./src/routes/OrderRoutes");
+const port = 3003;
 
 // parse application/json
 app.use(BodyParser.json());
 
-app.use("/api/book", BookRoutes);
+app.use("/api/order", OrderRoutes);
 
 app.set("port", port);
 
 app.listen(app.get("port"), () => {
-  console.log(`Book server started and listen on ${port}`);
+  console.log(`Order server started and listen on ${port}`);
 });
