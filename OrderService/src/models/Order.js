@@ -12,9 +12,6 @@ function Order() {
     const totalBookPrice = allBooks.reduce((pre, cur) => pre + cur.price, 0);
     const totalCatalogPrice = allCatalogs.reduce((pre, cur) => pre + cur.price, 0);
 
-    console.log('calculate/totalBookPrice', totalBookPrice);
-    console.log('calculate/totalCatalogPrice', totalCatalogPrice);
-
     const totalPrice = +(totalBookPrice + totalCatalogPrice).toFixed(12) ;
 
     return totalPrice;    
