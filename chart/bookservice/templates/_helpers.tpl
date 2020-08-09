@@ -37,9 +37,6 @@ Common labels
 {{- define "bookservice.labels" -}}
 helm.sh/chart: {{ include "bookservice.chart" . }}
 {{ include "bookservice.selectorLabels" . }}
-{{- if .Chart.AppVersion }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
@@ -48,7 +45,7 @@ Selector labels
 */}}
 {{- define "bookservice.selectorLabels" -}}
 app: {{ include "bookservice.name" . }}
-tier:  "backend"
+tier:  backend
 {{- end }}
 
 {{/*

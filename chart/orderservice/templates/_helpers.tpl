@@ -37,9 +37,6 @@ Common labels
 {{- define "orderservice.labels" -}}
 helm.sh/chart: {{ include "orderservice.chart" . }}
 {{ include "orderservice.selectorLabels" . }}
-{{- if .Chart.AppVersion }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 

@@ -7,6 +7,9 @@ const port = 3001;
 // parse application/json
 app.use(BodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('BookService Healthy');
+});
 app.use("/api/book", BookRoutes);
 
 app.set("port", port);

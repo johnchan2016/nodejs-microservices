@@ -7,6 +7,9 @@ const port = 3002;
 // parse application/json
 app.use(BodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('CatalogService Healthy');
+});
 app.use("/api/catalog", CatalogRoutes);
 
 app.set("port", port);
