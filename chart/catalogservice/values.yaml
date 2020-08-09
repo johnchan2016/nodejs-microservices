@@ -1,11 +1,11 @@
-# Default values for bookservice.
+# Default values for catalogservice.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: myhk2009/bookservice
+  repository: myhk2009/catalogservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.0.1"
@@ -46,8 +46,8 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: bookservice-demo.com
-      paths: 
+    - host: catalogservice-demo.com
+      paths:
         - "/"
   tls: []
   #  - secretName: chart-example-tls
@@ -79,4 +79,4 @@ tolerations: []
 
 affinity: {}
 
-containerPort: 3001
+containerPort: 3002
