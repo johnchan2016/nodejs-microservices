@@ -6,3 +6,7 @@
 192.168.64.2  catalogservice-demo.com
 192.168.64.2  orderservice-demo.com
 $echo 
+
+
+# build image
+docker build -t="your-name/image-name:<TAG>" .
