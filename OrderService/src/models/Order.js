@@ -27,12 +27,12 @@ async function RequestApis(data) {
 }
 
 function GetBooks(ids) {
-  let url = `${baseURL}:${ports.bookService}/api/book/getbooks`;
+  let url = `http://bookservice-demo.com/api/book/getbooks`;
   return axios.post(url, {ids: ids});
 }
 
 function GetCatalogs(ids) {
-  let url = `${baseURL}:${ports.catalogService}/api/catalog/getCatalogs`;
+  let url = `http://catalogservice-demo.com/api/catalog/getCatalogs`;
   return axios.post(url, { ids: ids });
 }
 
