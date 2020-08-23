@@ -6,11 +6,11 @@ const port = 3003;
 
 // parse application/json
 app.use(BodyParser.json());
+app.use("/api/order", OrderRoutes);
 
 app.get('/healthz', (req, res) => {
   res.send('OrderService Healthy');
 });
-app.use("/api/order", OrderRoutes);
 
 app.set("port", port);
 
