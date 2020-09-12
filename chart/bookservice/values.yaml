@@ -48,7 +48,7 @@ ingress:
   hosts:
     - host: bookservice-demo.com
       paths: 
-        - "/healthz"
+        - "/"
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
